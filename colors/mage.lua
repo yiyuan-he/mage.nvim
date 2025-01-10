@@ -30,3 +30,24 @@ hl("LineNr",        { fg = palette.gutter })
 hl("CursorLine",    { bg = palette.cursorline })
 hl("CursorLineNr",  { fg = palette.fg, bold = true })
 hl("Visual",        { bg = palette.selection })
+
+-- Now set the built-in terminal's ANSI color slots:
+vim.g.terminal_color_0  = palette.bg
+vim.g.terminal_color_1  = palette.red
+vim.g.terminal_color_2  = palette.green
+vim.g.terminal_color_3  = palette.yellow
+vim.g.terminal_color_4  = palette.blue
+vim.g.terminal_color_5  = palette.purple
+vim.g.terminal_color_6  = palette.cyan
+vim.g.terminal_color_7  = palette.fg
+vim.g.terminal_color_8  = palette.comment
+vim.g.terminal_color_9  = palette.red
+vim.g.terminal_color_10 = palette.green
+vim.g.terminal_color_11 = palette.yellow
+vim.g.terminal_color_12 = palette.blue
+vim.g.terminal_color_13 = palette.purple
+vim.g.terminal_color_14 = palette.cyan
+vim.g.terminal_color_15 = palette.fg
+
+vim.g.terminal_color_background = palette.bg
+vim.g.terminal_color_foreground = palette.fg
