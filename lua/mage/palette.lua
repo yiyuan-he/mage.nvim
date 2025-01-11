@@ -12,6 +12,7 @@ M.yellow   = "#e0af68"
 M.blue     = "#7aa2f7"
 M.purple   = "#ad8ee6"
 M.cyan     = "#449dab"
+M.orange   = "#e57958"
 
 -- UI helpers: selection, cursor line, gutter, etc.
 M.selection  = "#434c5e" -- a bit lighter than the background
