@@ -1,9 +1,9 @@
 local M = {}
 
 -- Background & Neutral Tones 
-M.bg       = "#2e3440"
-M.fg       = "#d8dee9"
-M.comment  = "#4c566a"
+M.bg       = "#282c34"
+M.fg       = "#dcdfe4"
+M.comment  = "#596172"
 
 -- Vibrant Accents
 M.red      = "#f7768e"
