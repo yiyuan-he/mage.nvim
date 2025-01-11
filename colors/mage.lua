@@ -35,6 +35,28 @@ hl("Visual",        { bg = palette.selection })
 -- Treesitter Highlight Groups
 ------------------------------------------------------------------------------
 
+-- Strings
+hl("@string",         { fg = palette.green })
+hl("@string.regex",   { fg = palette.green, italic = true })
+hl("@string.escape",  { fg = palette.red, bold = true })
+hl("@string.special", { fg = palette.purple })
+
+-- Characters
+hl("@character",         { fg = palette.yellow })
+hl("@character.special", { fg = palette.purple, italic = true })
+
+-- Booleans
+hl("@boolean",           { fg = palette.red, bold = true })
+
+-- Numbers
+hl("@number",            { fg = palette.yellow })
+hl("@number.float",      { fg = palette.yellow, bold = true })
+
+-- Constants
+hl("@constant",          { fg = palette.cyan })
+hl("@constant.builtin",  { fg = palette.cyan, italic = true })
+hl("@constant.macro",    { fg = palette.red })
+
 -- Variables
 hl("@variable",         { fg = palette.red })
 hl("@variable.builtin", { fg = palette.cyan, italic = true })
