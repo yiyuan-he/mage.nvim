@@ -57,9 +57,8 @@ hl("@constant.macro",     { fg = palette.red })
 
 -- Variables
 -- NOTE: Using the “foreground” color for normal variables can reduce red overload
-hl("@variable",           { fg = palette.fg })
+hl("@variable",           { fg = palette.purple })
 hl("@variable.builtin",   { fg = palette.red, italic = true })
-hl("@variable.cpp",       { fg = palette.blue})
 
 -- Functions
 hl("@function",           { fg = palette.blue, bold = true }) -- definitions
