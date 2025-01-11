@@ -44,6 +44,50 @@ hl("@function",         { fg = palette.blue })
 hl("@function.call",    { fg = palette.blue })
 hl("@function.builtin", { fg = palette.blue, bold = true })
 
+-- Highlight parameters differently
+hl("@parameter",         { fg = palette.yellow })
+
+-- For properties in objects/classes
+hl("@property",          { fg = palette.blue })
+
+-- For fields (similar to properties, but can be used differently in some languages)
+hl("@field",             { fg = palette.blue })
+
+-- For methods (object-bound functions)
+hl("@method",            { fg = palette.blue })
+
+-- For classes or types
+hl("@type",              { fg = palette.yellow, bold = true })
+hl("@type.builtin",      { fg = palette.yellow, italic = true })
+
+-- Constants
+hl("@constant",          { fg = palette.cyan })
+hl("@constant.builtin",  { fg = palette.cyan, italic = true })
+
+-- Numbers, booleans, floats
+hl("@number",            { fg = palette.yellow })
+hl("@boolean",           { fg = palette.red, bold = true })
+hl("@float",             { fg = palette.yellow })
+
+-- Operators (+, -, * etc.)
+hl("@operator",          { fg = palette.fg })
+
+-- Control statements (if, else, while, for, etc.)
+hl("@conditional",       { fg = palette.purple, bold = true })
+hl("@repeat",            { fg = palette.purple, bold = true })
+hl("@keyword.operator",  { fg = palette.red }) 
+hl("@keyword.return",    { fg = palette.red, bold = true })
+
+-- GitSigns
+hl("GitSignsAdd",    { fg = palette.green })
+hl("GitSignsChange", { fg = palette.yellow })
+hl("GitSignsDelete", { fg = palette.red })
+
+-- Telescope
+hl("TelescopeBorder", { fg = palette.comment })
+hl("TelescopePromptPrefix", { fg = palette.blue })
+hl("TelescopeMatching", { fg = palette.purple, bold = true })
+
 -- Now set the built-in terminal's ANSI color slots:
 vim.g.terminal_color_0  = palette.bg
 vim.g.terminal_color_1  = palette.red
