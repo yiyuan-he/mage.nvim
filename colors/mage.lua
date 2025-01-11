@@ -31,6 +31,19 @@ hl("CursorLine",    { bg = palette.cursorline })
 hl("CursorLineNr",  { fg = palette.fg, bold = true })
 hl("Visual",        { bg = palette.selection })
 
+------------------------------------------------------------------------------
+-- Treesitter Highlight Groups
+------------------------------------------------------------------------------
+
+-- Variables
+hl("@variable",         { fg = palette.red })
+hl("@variable.builtin", { fg = palette.cyan, italic = true })
+
+-- Functions
+hl("@function",         { fg = palette.blue })
+hl("@function.call",    { fg = palette.blue })
+hl("@function.builtin", { fg = palette.blue, bold = true })
+
 -- Now set the built-in terminal's ANSI color slots:
 vim.g.terminal_color_0  = palette.bg
 vim.g.terminal_color_1  = palette.red
