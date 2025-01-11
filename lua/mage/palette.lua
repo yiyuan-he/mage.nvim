@@ -1,17 +1,21 @@
 local M = {}
 
-M.bg       = "#282c34"
-M.fg       = "#dcdfe4"
-M.comment  = "#596172"
-M.red      = "#e06c75"
-M.green    = "#98c379"
-M.yellow   = "#e5c07b"
-M.blue     = "#61afef"
-M.purple   = "#c678dd"
-M.cyan     = "#56b6c2"
+-- Background & Neutral Tones 
+M.bg       = "#2e3440"
+M.fg       = "#d8dee9"
+M.comment  = "#4c566a"
 
-M.selection  = "#474e5d"
-M.cursorline = "#313640"
+-- Vibrant Accents
+M.red      = "#f7768e"
+M.green    = "#9ece6a"
+M.yellow   = "#e0af68"
+M.blue     = "#7aa2f7"
+M.purple   = "#ad8ee6"
+M.cyan     = "#449dab"
+
+-- UI helpers: selection, cursor line, gutter, etc.
+M.selection  = "#434c5e" -- a bit lighter than the background
+M.cursorline = "#3b4252"
 M.gutter     = "#3b4252"
 
 return M
