@@ -97,13 +97,13 @@ hl("TelescopePromptPrefix",  { fg = palette.blue })
 hl("TelescopeMatching",      { fg = palette.purple, bold = true })
 
 
-hl("RainbowDelimiterRed",     { fg = palette.red })
-hl("RainbowDelimiterYellow",  { fg = palette.yellow })
-hl("RainbowDelimiterBlue",    { fg = palette.blue })
-hl("RainbowDelimiterOrange",  { fg = palette.orange })
-hl("RainbowDelimiterGreen",   { fg = palette.green })
-hl("RainbowDelimiterViolet",  { fg = palette.purple })
-hl("RainbowDelimiterCyan",    { fg = palette.cyan })
+hl("RainbowDelimiterRed",     { fg = palette.bright_red })
+hl("RainbowDelimiterOrange",  { fg = palette.bright_orange })
+hl("RainbowDelimiterYellow",  { fg = palette.bright_yellow })
+hl("RainbowDelimiterGreen",   { fg = palette.bright_green })
+hl("RainbowDelimiterCyan",    { fg = palette.bright_cyan })
+hl("RainbowDelimiterBlue",    { fg = palette.bright_blue })
+hl("RainbowDelimiterViolet",  { fg = palette.bright_purple })
 
 ------------------------------------------------------------------------------
 -- Terminal Colors
