@@ -18,99 +18,88 @@ local function hl(group, opts)
   vim.api.nvim_set_hl(0, group, opts)
 end
 
--- 6) Example highlights
-hl("Normal",   { fg = palette.fg, bg = palette.bg })
-hl("Comment",  { fg = palette.comment, italic = true })
-hl("String",   { fg = palette.green })
-hl("Keyword",  { fg = palette.red, bold = true })
-hl("Function", { fg = palette.blue })
-
--- Gutter, line numbers, etc.
-hl("LineNr",        { fg = palette.gutter })
-hl("CursorLine",    { bg = palette.cursorline })
-hl("CursorLineNr",  { fg = palette.fg, bold = true })
-hl("Visual",        { bg = palette.selection })
+-- 6) Base UI groups
+hl("Normal",       { fg = palette.fg, bg = palette.bg })
+hl("Comment",      { fg = palette.comment, italic = true })
+hl("String",       { fg = palette.green })
+hl("Keyword",      { fg = palette.red, bold = true })
+hl("Function",     { fg = palette.blue })
+hl("LineNr",       { fg = palette.gutter })
+hl("CursorLine",   { bg = palette.cursorline })
+hl("CursorLineNr", { fg = palette.fg, bold = true })
+hl("Visual",       { bg = palette.selection })
 
 ------------------------------------------------------------------------------
 -- Treesitter Highlight Groups
 ------------------------------------------------------------------------------
 
 -- Strings
-hl("@string",         { fg = palette.green })
-hl("@string.regex",   { fg = palette.green, italic = true })
-hl("@string.escape",  { fg = palette.red, bold = true })
-hl("@string.special", { fg = palette.purple })
+hl("@string",          { fg = palette.green })
+hl("@string.regex",    { fg = palette.green, italic = true })
+hl("@string.escape",   { fg = palette.red, bold = true })
+hl("@string.special",  { fg = palette.purple })
 
 -- Characters
-hl("@character",         { fg = palette.yellow })
-hl("@character.special", { fg = palette.purple, italic = true })
+hl("@character",          { fg = palette.green })
+hl("@character.special",  { fg = palette.purple, italic = true })
 
 -- Booleans
-hl("@boolean",           { fg = palette.red, bold = true })
+hl("@boolean",            { fg = palette.red, bold = true })
 
 -- Numbers
-hl("@number",            { fg = palette.yellow })
-hl("@number.float",      { fg = palette.yellow, bold = true })
+hl("@number",             { fg = palette.yellow })
+hl("@number.float",       { fg = palette.yellow, bold = true })
 
 -- Constants
-hl("@constant",          { fg = palette.cyan })
-hl("@constant.builtin",  { fg = palette.cyan, italic = true })
-hl("@constant.macro",    { fg = palette.red })
+hl("@constant",           { fg = palette.cyan })
+hl("@constant.builtin",   { fg = palette.cyan, italic = true })
+hl("@constant.macro",     { fg = palette.red })
 
 -- Variables
-hl("@variable",         { fg = palette.red })
-hl("@variable.builtin", { fg = palette.cyan, italic = true })
+-- NOTE: Using the “foreground” color for normal variables can reduce red overload
+hl("@variable",           { fg = palette.fg })
+hl("@variable.builtin",   { fg = palette.red, italic = true })
 
 -- Functions
-hl("@function",         { fg = palette.blue })
-hl("@function.call",    { fg = palette.blue })
-hl("@function.builtin", { fg = palette.blue, bold = true })
+hl("@function",           { fg = palette.blue, bold = true }) -- definitions
+hl("@function.call",      { fg = palette.blue })              -- calls
+hl("@function.builtin",   { fg = palette.blue, italic = true })
 
--- Highlight parameters differently
-hl("@parameter",         { fg = palette.yellow })
+-- Parameters, fields, etc.
+hl("@parameter",          { fg = palette.yellow })
+hl("@property",           { fg = palette.blue })
+hl("@field",              { fg = palette.blue })
+hl("@method",             { fg = palette.blue })
 
--- For properties in objects/classes
-hl("@property",          { fg = palette.blue })
-
--- For fields (similar to properties, but can be used differently in some languages)
-hl("@field",             { fg = palette.blue })
-
--- For methods (object-bound functions)
-hl("@method",            { fg = palette.blue })
-
--- For classes or types
-hl("@type",              { fg = palette.yellow, bold = true })
-hl("@type.builtin",      { fg = palette.yellow, italic = true })
-
--- Constants
-hl("@constant",          { fg = palette.cyan })
-hl("@constant.builtin",  { fg = palette.cyan, italic = true })
-
--- Numbers, booleans, floats
-hl("@number",            { fg = palette.yellow })
-hl("@boolean",           { fg = palette.red, bold = true })
-hl("@float",             { fg = palette.yellow })
+-- Types
+hl("@type",               { fg = palette.yellow, bold = true })
+hl("@type.builtin",       { fg = palette.yellow, italic = true })
 
 -- Operators (+, -, * etc.)
-hl("@operator",          { fg = palette.fg })
+hl("@operator",           { fg = palette.fg })
 
 -- Control statements (if, else, while, for, etc.)
-hl("@conditional",       { fg = palette.purple, bold = true })
-hl("@repeat",            { fg = palette.purple, bold = true })
-hl("@keyword.operator",  { fg = palette.red }) 
-hl("@keyword.return",    { fg = palette.red, bold = true })
+hl("@conditional",        { fg = palette.purple, bold = true })
+hl("@repeat",             { fg = palette.purple, bold = true })
+hl("@keyword.operator",   { fg = palette.red })
+hl("@keyword.return",     { fg = palette.red, bold = true })
 
--- GitSigns
-hl("GitSignsAdd",    { fg = palette.green })
-hl("GitSignsChange", { fg = palette.yellow })
-hl("GitSignsDelete", { fg = palette.red })
+------------------------------------------------------------------------------
+-- Plugins
+------------------------------------------------------------------------------
 
--- Telescope
-hl("TelescopeBorder", { fg = palette.comment })
-hl("TelescopePromptPrefix", { fg = palette.blue })
-hl("TelescopeMatching", { fg = palette.purple, bold = true })
+hl("GitSignsAdd",         { fg = palette.green })
+hl("GitSignsChange",      { fg = palette.yellow })
+hl("GitSignsDelete",      { fg = palette.red })
 
--- Now set the built-in terminal's ANSI color slots:
+hl("TelescopeBorder",        { fg = palette.comment })
+hl("TelescopePromptPrefix",  { fg = palette.blue })
+hl("TelescopeMatching",      { fg = palette.purple, bold = true })
+
+------------------------------------------------------------------------------
+-- Terminal Colors
+------------------------------------------------------------------------------
+
 vim.g.terminal_color_0  = palette.bg
 vim.g.terminal_color_1  = palette.red
 vim.g.terminal_color_2  = palette.green
